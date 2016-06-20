@@ -20,6 +20,9 @@ public class FirstActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.first_layout);
+        account = (EditText)findViewById(R.id.account);
+        password = (EditText)findViewById(R.id.password);
+        login = (Button)findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,6 +33,7 @@ public class FirstActivity extends Activity {
                         Toast.makeText(FirstActivity.this, "Access Success", Toast.LENGTH_SHORT).show();
                     }
                 }
+                Toast.makeText(FirstActivity.this, "No This Account", Toast.LENGTH_SHORT).show();
             }
         });
     }
